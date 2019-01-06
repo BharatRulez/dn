@@ -1,0 +1,113 @@
+.card{
+    border-radius: 0;
+    min-height : 150px;
+}
+.specialText {
+	background: #FF53A7;
+	color: white;
+	padding: 3px 7px;
+	border-radius: 8px;
+}
+.card-catgory {
+	cursor: pointer;
+}
+#flashProducts .col-6, #catflashProductsegories .col-3{
+	padding-right: 1px;
+	padding-left: 1px;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    height : 232px;
+  }
+
+  /*resCarousel Css*/
+
+.outt {
+    display: none;
+}
+
+.leftRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+}
+
+.rightRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+}
+
+.resCarousel {
+    /*float: left;
+    overflow: hidden;*/
+    width: 100%;
+    position: relative;
+}
+
+.resCarousel-inner {
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.resCarousel-inner .item {
+    display: inline-block;
+    font-size: 14px;
+    white-space: initial;
+}
+
+
+/*banner*/
+
+.banner {
+    overflow: hidden !important;
+}
+
+
+/*tile css*/
+
+.resCarousel-inner .item .tile {
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 5px;
+}
+
+
+/*animation*/
+
+.resCarousel[data-animator="lazy"] .item {
+    transition: .6s ease all;
+}
+
+
+
+
+/*resCarousel Css End*/
+.category-list {
+    padding: 0px 0px;
+    text-align: center;
+}
+
+.category-list .mb-2, .category-list .my-2 {
+    margin-bottom: 0rem !important;
+}
+
+ 

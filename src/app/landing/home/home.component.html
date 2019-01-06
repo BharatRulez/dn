@@ -1,0 +1,112 @@
+<div>
+    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide *ngFor="let image of images">
+            <img class="d-block  w-100" [src]="image.imageUrl" alt="Random slide">
+        </ng-template>
+    </ngb-carousel>
+</div>
+
+<section id="flash-products-section" class="mt-4">
+    <div class="p-3 mb-2 bg-info text-white tn-margin-top">
+        <div class="container text-uppercase">Flash Sale</div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="spinner-loader">
+                <div class="row">
+                    <div class="col-12 col-lg-6" *ngFor="let flashProduct of flashSale;let i=index">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-3 col-sm-3">
+                                        <img class="card-img-bottom" [src]="flashProduct.productImage" alt="">
+                                    </div>
+                                    <div class="col-6 col-sm-6">
+                                        <h6 class="card-title">{{flashProduct.productName}}</h6>
+                                        <p class="card-text">{{flashProduct.productUnitSize}}</p>
+                                        <p class="card-text">
+                                            <span class="specialText">{{flashProduct.specialText}}</span>
+                                        </p>
+
+                                    </div>
+                                    <div class="col-3 col-sm-3">
+                                        <p class="card-text" text-align="center">
+                                            <span><i class="fa fa-inr" aria-hidden="true"></i>{{flashProduct.productUnitPrice}}</span>&nbsp;
+                                            <b><span><i class="fa fa-inr" aria-hidden="true"></i>{{flashProduct.strikePrice}}</span></b><br>
+                                            <button type="button" data-value="1" class="btn btn-success btn-sm btn-add-to-cart">Add</button>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+</section>
+
+<section id="new-arrivals-section" class="mt-4">
+    <div class="p-3 mb-2 bg-success text-white tn-margin-top">
+        <div class="container text-uppercase">New Arrivals</div>
+    </div>
+
+    <div class="container p8">
+        <div class="spinner-loader">
+            <!-- <div class="resCarousel" data-items="2-3-4-5" data-slide="5" data-speed="900" data-interval="4000" data-load="3" data-animator="lazy">
+                    <div class="resCarousel-inner" >
+                <div >
+                       <div class="item" *ngFor="let items of newArrivals;let i=index">
+                            <div class="tile">
+                                <div>
+                                    <img [src]="items.image" style="height: 236px" class="img-fluid" />
+                                    <h1></h1>
+                                </div>
+                                <h6><b></b></h6>
+                                <p style="padding-bottom: 12px"></p>
+                            </div>
+                        </div>
+                 </div>
+                        <button class='btn1 btn-default leftRs'><</button>
+                        <button class='btn1 btn-default rightRs'>></button>
+                        </div>
+            <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+            </div>
+                 -->
+            <ngb-carousel *ngIf="newArrivals">
+                <ng-template ngbSlide *ngFor="let items of newArrivals;let i=index">
+                    <img [src]="items.image" alt="Random first slide" style="height: 236px">
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</section>
+
+<section id="categories-section" class="mt-4 mb-4">
+    <div class="p-3 mb-2 bg-warning text-white tn-margin-top">
+        <div class="container text-uppercase">Categories</div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="spinner-loader">
+                <div class="row">
+                    <div class="col-3 category-list" *ngFor="let productCategory of productCategory;let i= index">
+                        <div class="card card-catgory mb-2" data-value="">
+                            <div class="card-body">
+                                <p class="card-text-img" text-align="center"><img class="img-fluid" [src]="productCategory.productCategoryImage"></p>
+                                <p class="card-text" text-align="center">{{productCategory.productCategoryName}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+</section>
